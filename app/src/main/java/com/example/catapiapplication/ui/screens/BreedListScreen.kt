@@ -46,8 +46,7 @@ fun BreedCard(breed: Breeds, modifier: Modifier = Modifier) {
 
 @Composable
 fun BreedsListScreen(
-    breeds: List<Breeds>,
-    modifier: Modifier
+    breeds: List<Breeds>
 ) {
     LazyColumn(contentPadding = PaddingValues(4.dp)) {
         items(breeds) { breed -> BreedCard(breed) }

@@ -1,6 +1,6 @@
 package com.example.catapiapplication.network
 
-import com.example.catapi.CatBreeds
+import com.example.catapiapplication.network.model.breeds.CatBreeds
 import retrofit2.http.GET
 import retrofit2.http.Query
 

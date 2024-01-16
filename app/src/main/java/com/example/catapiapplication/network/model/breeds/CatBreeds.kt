@@ -1,5 +1,4 @@
-package com.example.catapi
-
+package com.example.catapiapplication.network.model.breeds
 import com.google.gson.annotations.SerializedName
 
 
