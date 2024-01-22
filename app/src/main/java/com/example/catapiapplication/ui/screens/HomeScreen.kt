@@ -12,7 +12,7 @@ fun HomeScreen(
 ) {
     when(catUIState) {
         is CatUIState.Loading -> LoadingScreen(modifier)
-        is CatUIState.Success -> BreedsListScreen(breeds = catUIState.breeds, modifier = modifier)
+        is CatUIState.Success -> BreedsListScreen(breeds = catUIState.breeds)
         is CatUIState.Error -> ErrorScreen(retry = retryAction, modifier)
     }
 }

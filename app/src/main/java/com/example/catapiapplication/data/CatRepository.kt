@@ -11,5 +11,11 @@ class NetworkCatRepository(
 ) : CatRepository {
     override suspend fun getBreeds(limit: Int, page: Int): List<Breeds> =
         catService.breeds(limit, page)
-            .map { item -> Breeds(name = item.name, description = item.description) }
+            .map { item ->
+                Breeds(
+                    name = item.name,
+                    description = item.description,
+                    image = item.referenceImageId?.let { catService.images(it).url }
+                )
+            }
 }
