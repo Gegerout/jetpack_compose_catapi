@@ -9,10 +9,10 @@ interface AppContainer {
 }
 
 class DefaultAppContainer : AppContainer {
-    private val BASE_URL = "https://api.thecatapi.com/v1/"
+    private val baseURL = "https://api.thecatapi.com/v1/"
 
     private val retrofit: Retrofit =
-        Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl(BASE_URL)
+        Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl(baseURL)
             .build()
 
     private val retrofitService: CatService by lazy {
